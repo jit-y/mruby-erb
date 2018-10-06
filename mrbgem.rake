@@ -7,5 +7,6 @@ MRuby::Gem::Specification.new('mruby-erb') do |spec|
 
   # Allow the exect regexp gem to be specified by the client
   # (in build_config.rb, or by exporting environment variables in the shell).
+  spec.add_dependency "mruby-eval", core: "mruby-eval"
   spec.add_dependency ENV["MRUBY_REGEXP_GEM"] || "mruby-regexp-pcre"
 end
